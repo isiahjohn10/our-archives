@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Archives</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root,[data-theme=dark]{--bg:#080808;--s:#141414;--mid:#222;--t:#f5f0e8;--m:#a39d94;--a:#e4182a;--d:#7d0a14;--l:#ff4a58;--b:rgba(245,240,232,.1);--g:rgba(228,24,42,.2);--i:rgba(245,240,232,.05)}
+[data-theme=light]{--bg:#f3eee4;--s:#e9e2d3;--mid:#dcd3c0;--t:#0d0d0d;--m:#5e574c;--a:#c70f1e;--d:#7d0a14;--l:#b00d19;--b:rgba(13,13,13,.14);--g:rgba(199,15,30,.14);--i:rgba(13,13,13,.05)}
+*{box-sizing:border-box;margin:0}[hidden]{display:none!important}html{scroll-behavior:smooth}
+body{font-family:Barlow,system-ui,sans-serif;color:var(--t);min-height:100vh;background:var(--bg);overflow-x:hidden;line-height:1.55}
+h1,h2,h3,.logo,.cd,.stat b{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;letter-spacing:.04em}
+h1{font-size:clamp(3rem,7vw,6rem);line-height:.9;margin-bottom:.5rem}h2{font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:.95;margin:2.4rem 0 1rem}h3{font-size:1.5rem;line-height:1}
+small,.sub,.tag{color:var(--m)}.sub{margin-bottom:1.4rem}
+button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer}
+label,.chips span,.legend,.cal.head,.ib button,.ib-btn,.btn,.nav button,.badge{font-family:'Barlow Condensed',sans-serif;letter-spacing:.2em;text-transform:uppercase}
+label{display:block;font-size:.72rem;color:var(--m)}
+input,select,textarea{width:100%;padding:.85rem 1rem;border-radius:0;border:1px solid var(--b);background:var(--i);outline:none;font-weight:400;letter-spacing:0;text-transform:none;transition:border-color .3s,background .3s}
+select option{color:#000}input:focus,select:focus,textarea:focus{border-color:var(--a);box-shadow:0 0 0 3px var(--g)}textarea{min-height:110px;resize:vertical}label input,label select,label textarea{margin-top:.4rem;color:var(--t)}
+:focus-visible{outline:2px solid var(--l);outline-offset:2px}
+.btn{padding:.85rem 1.8rem;border:0;background:var(--a);color:#fff;font-weight:700;font-size:.82rem;transition:transform .2s,filter .3s}.btn:hover{transform:translateY(-3px);filter:brightness(1.15)}.btn:disabled{opacity:.6;cursor:wait}
+.btn.ghost,.ib button,.ib-btn{background:transparent;border:1px solid var(--b);color:var(--t);font-weight:600;font-size:.72rem;padding:.55rem 1rem;transition:all .3s}.btn.ghost{padding:.85rem 1.8rem;font-size:.82rem;border-color:rgba(245,240,232,.35)}
+.btn.ghost:hover,.ib button:hover,.ib-btn:hover{border-color:var(--a);background:var(--g);transform:none;filter:none}.ib{display:flex;gap:.4rem;flex-wrap:wrap}
+.card{background:var(--s);border-left:4px solid var(--a);padding:1.3rem 1.5rem;margin-bottom:3px;transition:background .3s,transform .2s}.card:hover{background:var(--mid);transform:translateX(4px)}
+.top{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:12px clamp(1rem,4vw,3.5rem);background:var(--s);border-bottom:1px solid var(--b)}
+.logo{display:flex;gap:.5rem;align-items:center;font-size:1.5rem;color:var(--t)}.logo i{color:var(--a);font-style:normal;animation:beat 2.2s infinite}
+@keyframes beat{0%,36%,100%{transform:scale(1)}12%{transform:scale(1.2)}24%{transform:scale(1.08)}}
+.nav{display:flex;gap:.4rem}.nav button{position:relative;background:none;border:0;padding:.6rem .9rem;font-size:.73rem;color:var(--m);transition:color .3s}.nav button:hover,.nav button.on{color:var(--l)}
+.nav button:after{content:'';position:absolute;left:.9rem;right:.9rem;bottom:2px;height:2px;background:var(--a);transform:scaleX(0);transform-origin:left;transition:transform .35s}.nav button:hover:after,.nav button.on:after{transform:scaleX(1)}
+.ic{display:none}.tools{display:flex;gap:.5rem;align-items:center}.tools small{margin-right:.5rem}
+.pad{max-width:1180px;margin:0 auto;padding:110px clamp(1rem,4vw,3rem) 80px}
+.hero{position:relative;min-height:90vh;display:flex;flex-direction:column;justify-content:flex-end;padding:120px clamp(1rem,4vw,3.5rem) 80px;overflow:hidden}.hero>*{z-index:1}
+.hglow,.hgrid{position:absolute;inset:0;z-index:0!important}.hglow{background:radial-gradient(ellipse 80% 60% at 65% 35%,var(--g),transparent 70%),radial-gradient(ellipse 50% 50% at 15% 85%,var(--g),transparent 60%)}
+.hgrid{background-image:linear-gradient(rgba(128,128,128,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(128,128,128,.09) 1px,transparent 1px);background-size:70px 70px;animation:grid 25s linear infinite}@keyframes grid{to{background-position:70px 70px}}
+.hero:after{content:'';position:absolute;inset:0;background:radial-gradient(360px circle at var(--mx,70%) var(--my,35%),var(--g),transparent 70%);pointer-events:none}
+.badge{font-size:.72rem;letter-spacing:.4em;color:var(--l);margin-bottom:18px}
+.hh{font-size:clamp(4.5rem,13vw,13rem);line-height:.86;margin:0}.hh span{display:block}.hh .ol{-webkit-text-stroke:2px var(--t);color:transparent}.hh .rd{color:var(--a)}
+.hp{max-width:480px;font-style:italic;color:var(--m);margin-top:26px}.hero .actions{margin-top:34px}
+.hstat{position:absolute;right:clamp(1rem,4vw,3.5rem);bottom:80px;text-align:center}.hstat b{display:block;font:400 6rem/1 'Bebas Neue',sans-serif;color:var(--l)}.hstat span{font:.72rem 'Barlow Condensed';letter-spacing:.28em;text-transform:uppercase;color:var(--m)}
+.ticker{background:var(--a);overflow:hidden;padding:13px 0}.ti{display:flex;width:max-content;animation:tick 30s linear infinite}.ticker:hover .ti{animation-play-state:paused}.ti span{font:1.1rem 'Bebas Neue',sans-serif;letter-spacing:.2em;color:#fff;padding:0 28px;white-space:nowrap}.ti u{text-decoration:none;color:rgba(0,0,0,.4)}@keyframes tick{to{transform:translateX(-50%)}}
+.grid3{display:grid;grid-template-columns:repeat(4,1fr);background:var(--d);padding:2.6rem clamp(1rem,4vw,3.5rem)}.grid3 .card,.grid3 .card:hover{background:none;border:0;border-right:1px solid rgba(255,255,255,.18);transform:none;margin:0;padding:0 10px;text-align:center}.grid3 .card:last-child{border:0}
+.stat b{display:block;font-size:3.8rem;line-height:1;color:#fff}.stat span{font:.72rem 'Barlow Condensed';letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.sec{padding:90px clamp(1rem,4vw,3.5rem)}.sec.alt{background:var(--s)}.sec h2{font-size:clamp(3rem,5.5vw,5.5rem);margin:0 0 2rem}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:3px}.tile{position:relative;overflow:hidden;background:var(--bg);padding:2rem 1.6rem;transition:transform .3s}.tile:hover{transform:translateY(-5px)}
+.tile:after,.vi:after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--a);transform:scaleX(0);transform-origin:left;transition:transform .45s}.tile:hover:after,.vi:hover:after{transform:scaleX(1)}.tile .cd{font-size:4.2rem;line-height:1;color:var(--l)}.tile h3{margin:.6rem 0 .3rem;font-size:1.7rem}
+.strip{display:flex;gap:3px;overflow-x:auto;scrollbar-width:none;margin:0 calc(clamp(1rem,4vw,3.5rem)*-1);padding:0 clamp(1rem,4vw,3.5rem)}.strip::-webkit-scrollbar{display:none}
+.gi{flex:0 0 250px;height:340px;position:relative;overflow:hidden;cursor:zoom-in;transition:flex .4s ease}.gi:hover{flex-basis:420px}.gi img,.gi video{width:100%;height:100%;object-fit:cover;transition:transform .5s}.gi:hover img{transform:scale(1.06)}
+.go{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:1.2rem;background:linear-gradient(to top,rgba(0,0,0,.85),transparent 60%);opacity:0;transition:opacity .35s;color:#fff}.go b{font:400 1.5rem 'Bebas Neue',sans-serif;letter-spacing:.05em}.go small{color:rgba(255,255,255,.7)}.gi:hover .go,.vi:hover .go{opacity:1}
+.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin:1rem 0}.inline{display:flex;gap:.8rem;flex-wrap:wrap;align-items:end}.inline>*{flex:1 1 150px}.inline .btn{flex:0 0 auto}.bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}.cal.head{text-align:center;color:var(--m);font-size:.72rem;margin-bottom:4px}
+.cal button{position:relative;overflow:hidden;aspect-ratio:1/.9;background:var(--s);border:0;padding:.5rem;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;transition:transform .3s}.cal button b{font:400 1.4rem 'Bebas Neue',sans-serif}
+.cal button:after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--a);transform:scaleX(0);transform-origin:left;transition:transform .45s}.cal button:hover{transform:translateY(-5px)}.cal button:hover:after{transform:scaleX(1)}
+.cal button.has{background:linear-gradient(160deg,var(--g),var(--s))}.cal button.today{background:var(--a);color:#fff}.cal button.today .dots u{background:#fff}.cal button.today .dots u.t{background:none;border-color:#fff}
+.dots{display:flex;gap:3px;align-items:center;flex-wrap:wrap}.dots u{width:8px;height:8px;border-radius:50%;background:var(--a)}.dots u.v{border-radius:0;background:var(--l)}.dots u.t{background:transparent;border:2px solid var(--a)}.dots u.s{width:auto;height:auto;background:none;color:var(--l);font-size:.85rem;line-height:1}.legend{color:var(--m);font-size:.72rem;margin-top:1rem}
+.mem header,.row{display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap}.desc{white-space:pre-wrap;margin:.8rem 0;color:var(--m)}.chips{display:flex;gap:.4rem;flex-wrap:wrap}.chips span{font-size:.66rem;padding:.25rem .7rem;border:1px solid var(--b)}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:3px;margin-top:.9rem}.thumbs img,.thumbs video{width:100%;aspect-ratio:1;object-fit:cover;cursor:zoom-in;filter:grayscale(.35);transition:filter .3s,transform .3s}.thumbs img:hover,.thumbs video:hover{filter:none;transform:scale(1.04)}
+.cd{font-size:1.8rem;color:var(--l)}.empty{padding:2rem 0;color:var(--m)}
+.gridv{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:3px}.gridv .vi{aspect-ratio:1}.masonry{columns:200px;gap:3px}.masonry .vi{margin-bottom:3px;break-inside:avoid}
+.vi{position:relative;overflow:hidden;cursor:zoom-in}.vi img,.vi video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.vi:hover img{transform:scale(1.06)}.vi em{position:absolute;right:8px;top:8px;background:var(--a);color:#fff;padding:.1rem .5rem;font-style:normal;font-size:.75rem;z-index:1}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.88);backdrop-filter:blur(6px);display:grid;place-items:start center;padding:2rem 1rem;overflow:auto;z-index:80;animation:rise .25s both}@keyframes rise{from{opacity:0;transform:translateY(12px)}}
+.box{position:relative;background:var(--s);border-top:3px solid var(--a);padding:1.8rem;width:min(100%,700px)}.box h2:first-child{margin-top:0;font-size:2.3rem}.mx{position:absolute;top:.7rem;right:1rem;background:none;border:0;color:var(--m);font-size:1.3rem}.mx:hover{color:var(--l)}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}.fg .full{grid-column:1/-1}.drop{display:grid;place-items:center;border:2px dashed var(--b);padding:1.4rem;text-align:center;cursor:pointer;transition:border-color .3s,background .3s}.drop:hover{border-color:var(--a);background:var(--g)}
+.pv{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:.6rem;margin:.8rem 0}.pi{position:relative}.pi img,.pi video{width:100%;aspect-ratio:1;object-fit:cover}.pi input{margin-top:.3rem;padding:.4rem .6rem;font-size:.8rem}.pi button{position:absolute;top:4px;right:4px;border:0;background:var(--a);color:#fff;width:24px;height:24px}
+.ex{display:inline-flex;gap:.4rem;align-items:center;margin:0 .8rem .5rem 0}.ex img,.ex video{width:46px;height:46px;object-fit:cover}.ex input{width:auto;margin:0}
+.lb{place-items:center;background:rgba(0,0,0,.94)}.lb .sb{text-align:center;max-width:92vw}.lb img,.lb video{max-width:92vw;max-height:76vh}.lb p{margin:.7rem;color:#fff}.lb a.btn{display:inline-block;text-decoration:none}.lb .x,.lb .nv{position:fixed;background:var(--a);border:0;color:#fff;width:46px;height:46px;font-size:1.4rem;transition:filter .3s}.lb .x:hover,.lb .nv:hover{filter:brightness(1.2)}.lb .x{top:1rem;right:1rem}.lb .nv{top:50%}.lb .l{left:1rem}.lb .r{right:1rem}
+#toasts{position:fixed;top:5rem;right:1rem;display:grid;gap:.5rem;z-index:99}.toast{background:var(--s);border-left:4px solid var(--a);padding:.8rem 1.1rem;max-width:320px;animation:rise .3s both;box-shadow:0 8px 30px #0008}.toast.ok{border-left-color:#3ecf8e}
+.hearts{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:-1}.hearts span{position:absolute;bottom:-40px;color:var(--a);opacity:0;animation:fl linear infinite}@keyframes fl{10%{opacity:.14}100%{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+.load{text-align:center;font-size:2rem;color:var(--a);animation:beat 1.2s infinite;padding:8rem 3rem}
+.stage{position:relative;overflow:hidden;min-height:100vh;display:grid;place-items:center;padding:1.5rem;background-image:linear-gradient(rgba(128,128,128,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(128,128,128,.08) 1px,transparent 1px);background-size:70px 70px}
+.stage:before{content:'OUR ARCHIVES';position:absolute;font:400 clamp(6rem,24vw,24rem)/.8 'Bebas Neue',sans-serif;color:transparent;-webkit-text-stroke:1px var(--b);white-space:nowrap;pointer-events:none}
+.stage .card{position:relative;width:min(100%,430px);padding:2.2rem;border:0;border-top:3px solid var(--a);transform:none}.stage .card:hover{transform:none;background:var(--s)}.stage label{margin-bottom:1rem}.stage .btn{width:100%}.stage .logo{justify-content:center;font-size:2.6rem}.tag{text-align:center;font-style:italic;font-size:.85rem;margin:.3rem 0 1.4rem}
+.pw{position:relative}.pw button{position:absolute;right:.5rem;top:50%;transform:translateY(-35%);background:none;border:0;color:var(--m);font:.72rem 'Barlow Condensed';letter-spacing:.2em;text-transform:uppercase}.chk{display:flex;gap:.4rem;align-items:center}.chk input{width:auto;margin:0}
+.fab{position:fixed;bottom:24px;right:24px;z-index:50;display:flex;align-items:center;gap:8px;background:var(--a);color:#fff;border:0;font:400 1rem 'Bebas Neue',sans-serif;letter-spacing:.1em;padding:14px 22px;box-shadow:0 4px 24px var(--g);transition:transform .3s}.fab:hover{transform:translateY(-4px)}.fab i{width:8px;height:8px;background:#fff;border-radius:50%;animation:pulse 1.5s infinite}@keyframes pulse{50%{transform:scale(1.4);opacity:.7}}
+.ft{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center;padding:2rem clamp(1rem,4vw,3.5rem);border-top:1px solid var(--b);background:var(--s)}.ft p{font-size:.8rem;color:var(--m)}
+@media(max-width:900px){.top{flex-wrap:wrap}.nav{order:3;width:100%;overflow-x:auto}.tools small{display:none}.pad{padding-top:130px}.hero{padding-top:150px}.hstat{display:none}.grid3{grid-template-columns:1fr 1fr;row-gap:1.6rem}.fg{grid-template-columns:1fr}.logo span{font-size:1.2rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head>
+<body>
+<div class="hearts" id="hearts"></div><div id="toasts"></div>
+<main id="auth" class="stage" hidden>
+  <form class="card" id="af" autocomplete="off">
+    <div class="logo"><i>♥</i> Our Archives</div><p class="tag">Every date has a story. Every memory has a place.</p>
+    <div class="su"><label>Your name<input name="n1" maxlength="40"></label><label>Your partner's name<input name="n2" maxlength="40"></label><label>Relationship start date<input type="date" name="start"></label></div>
+    <label>Passcode<div class="pw"><input type="password" name="pass" required minlength="4"><button type="button" id="sp">Show</button></div></label>
+    <label class="su">Confirm passcode<input type="password" name="pass2"></label>
+    <button class="btn" id="abtn">Enter</button><p class="tag" id="anote" style="margin:1rem 0 0"></p>
+  </form>
+</main>
+<div id="app" hidden>
+  <header class="top"><div class="logo"><i>♥</i><span>OUR ARCHIVES</span></div><nav class="nav" id="nav"></nav>
+    <div class="tools"><small id="who"></small><button class="ib-btn" data-act="theme">Theme</button><button class="ib-btn" data-act="out">Lock</button><button class="btn" data-act="add">+ Memory</button></div></header>
+  <main id="view"></main>
+  <footer class="ft"><div class="logo"><i>♥</i> Our Archives</div><p>Everything is stored privately in this browser. The passcode only locks the screen on this device.</p></footer>
+  <button class="fab" data-act="add"><i></i>Add memory</button>
+</div>
+<script>
+// ===== helpers =====
+const $=(s,r=document)=>r.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pad=n=>String(n).padStart(2,'0'),iso=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`,fmt=d=>new Date(d+'T00:00').toLocaleDateString(undefined,{dateStyle:'full'});
+const uid=()=>crypto.randomUUID?crypto.randomUUID():Date.now().toString(36)+Math.random().toString(36).slice(2);
+const dd=(a,b)=>Math.round((new Date(a+'T00:00')-new Date(b+'T00:00'))/864e5);
+const nextOf=(d,rec,t)=>{if(!rec)return d>=t?d:null;let n=t.slice(0,4)+d.slice(4);if(n<t)n=(+t.slice(0,4)+1)+d.slice(4);return n};
+const U={},url=x=>U[x.id]??=URL.createObjectURL(x.blob);
+const MOODS=['Happy','Romantic','Peaceful','Excited','Nostalgic','Grateful'],CATS=['General','Date','Trip','Food','Milestone','Celebration','Diary'];
+const OKTYPE=/^(image\/(jpeg|png|webp|gif)|video\/(mp4|quicktime|webm))$/;
+function toast(m,ok){const e=document.createElement('div');e.className='toast'+(ok?' ok':'');e.textContent=m;$('#toasts').appendChild(e);setTimeout(()=>e.remove(),4200)}
+function modal(h,c=''){const m=document.createElement('div');m.className='modal '+c;m.innerHTML=`<div class="box">${c.includes('nox')?'':'<button class="mx" data-act="cl" aria-label="Close">✕</button>'}${h}</div>`;m.addEventListener('mousedown',e=>{if(e.target===m)m.remove()});document.body.appendChild(m);return m}
+function ask(msg){return new Promise(r=>{const m=modal(`<h2>Are you sure?</h2><p>${esc(msg)}</p><div class="actions"><button class="btn ghost" data-r="0">Cancel</button><button class="btn" data-r="1">Confirm</button></div>`,'nox');m.addEventListener('click',e=>{const b=e.target.closest('[data-r]');if(b){m.remove();r(b.dataset.r==='1')}});m.addEventListener('mousedown',e=>{if(e.target===m)r(false)})})}
+// ===== IndexedDB (data lives in this browser, survives refresh/close) =====
+const DB=new Promise((ok,no)=>{const r=indexedDB.open('our-archives',1);r.onupgradeneeded=()=>{const d=r.result;d.createObjectStore('memories',{keyPath:'id'});d.createObjectStore('dates',{keyPath:'id'});d.createObjectStore('meta')};r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error)});
+const tx=async(s,m,f)=>{const d=await DB;return new Promise((ok,no)=>{const t=d.transaction(s,m),r=f(t.objectStore(s));t.oncomplete=()=>ok(r&&r.result);t.onerror=t.onabort=()=>no(t.error||new Error('Storage error (is the disk or browser storage full?)'))})};
+const all=s=>tx(s,'readonly',o=>o.getAll()),put=(s,v,k)=>tx(s,'readwrite',o=>o.put(v,k)),del=(s,k)=>tx(s,'readwrite',o=>o.delete(k)),get=(s,k)=>tx(s,'readonly',o=>o.get(k));
+let cfg=null,M=[],D=[],view='home',cal=new Date(new Date().getFullYear(),new Date().getMonth(),1),vault={f:'all',q:'',l:'gridv'},vItems=[],LB=null;
+const live=()=>M.filter(m=>!m.deletedAt).sort((a,b)=>a.date<b.date?1:a.date>b.date?-1:0),liveD=()=>D.filter(x=>!x.deletedAt);
+const byId=id=>M.find(m=>m.id===id);
+async function load(){[M,D]=await Promise.all([all('memories'),all('dates')])}
+async function purge(){const lim=Date.now()-30*864e5;for(const m of await all('memories'))if(m.deletedAt&&m.deletedAt<lim)await del('memories',m.id);for(const x of await all('dates'))if(x.deletedAt&&x.deletedAt<lim)await del('dates',x.id)}
+// ===== theme, hearts =====
+function setTheme(t){document.documentElement.dataset.theme=t;try{localStorage.setItem('oa-theme',t)}catch{}}
+setTheme((()=>{try{return localStorage.getItem('oa-theme')||'dark'}catch{return'dark'}})());
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)for(let i=0;i<14;i++){const s=document.createElement('span');s.textContent='♥';s.style.cssText=`left:${Math.random()*100}%;font-size:${10+Math.random()*22}px;animation-duration:${12+Math.random()*14}s;animation-delay:-${Math.random()*20}s`;$('#hearts').appendChild(s)}
+// ===== passcode lock (privacy screen for this device, not encryption) =====
+async function hash(p,salt){const k=await crypto.subtle.importKey('raw',new TextEncoder().encode(p),'PBKDF2',false,['deriveBits']);return [...new Uint8Array(await crypto.subtle.deriveBits({name:'PBKDF2',salt,iterations:150000,hash:'SHA-256'},k,256))].map(x=>x.toString(16).padStart(2,'0')).join('')}
+function showAuth(setup){$('#auth').hidden=false;$('#app').hidden=true;document.querySelectorAll('.su').forEach(e=>e.hidden=!setup);$('#abtn').textContent=setup?'Create our archive':'Open our archive';$('#anote').textContent=setup?'The passcode only locks the screen on this device. Your data stays in this browser.':'';$('#af').reset()}
+$('#sp').addEventListener('click',e=>{const i=$('[name=pass]');i.type=i.type==='password'?'text':'password';e.target.textContent=i.type==='password'?'Show':'Hide'});
+$('#af').addEventListener('submit',async e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.target)),b=$('#abtn');b.disabled=true;
+ try{if(!crypto.subtle)throw new Error('Please open this file in a modern browser (Chrome, Edge, Firefox or Safari).');
+  if(!cfg){if(!f.n1.trim()||!f.n2.trim())throw new Error('Please enter both names.');if(f.pass.length<4)throw new Error('Passcode needs at least 4 characters.');if(f.pass!==f.pass2)throw new Error('Passcodes do not match.');
+   const salt=crypto.getRandomValues(new Uint8Array(16));cfg={names:[f.n1.trim(),f.n2.trim()],start:f.start||'',theme:document.documentElement.dataset.theme,salt,hash:await hash(f.pass,salt)};await put('meta',cfg,'cfg')}
+  else if(await hash(f.pass,cfg.salt)!==cfg.hash)throw new Error('Incorrect passcode.');
+  await enter()}catch(er){toast(er.message)}finally{b.disabled=false}});
+async function enter(){await purge();await load();setTheme(cfg.theme||'dark');$('#auth').hidden=true;$('#app').hidden=false;$('#who').textContent=cfg.names.join(' & ');go('home')}
+// ===== navigation =====
+const NAV=[['home','Home'],['calendar','Our Calendar'],['vault','Memory Vault'],['dates','Important Dates'],['trash','Trash Bin'],['settings','Settings']];
+$('#nav').innerHTML=NAV.map(([v,t])=>`<button data-act="go" data-v="${v}"><span>${t}</span>${t[0]}</button>`.replace(/<\/span>(.)<\/button>/,'</span><b class="ic">$1</b></button>')).join('');
+async function go(v){view=v;$('#view').className=v==='home'?'':'pad';scrollTo(0,0);document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));$('#view').innerHTML='<div class="load">♥</div>';try{await load();await V[v]()}catch(e){$('#view').innerHTML=`<p class="empty">${esc(e.message)}</p>`}}
+async function refresh(){await load();const dm=$('.modal[data-day]');if(dm){const d=dm.dataset.day;dm.remove();dayModal(d)}await V[view]()}
+// ===== memory card, lightbox =====
+function mcard(m){const th=m.media.map((x,i)=>x.kind==='video'?`<video data-act="light" data-id="${m.id}" data-i="${i}" src="${url(x)}#t=0.5" preload="metadata" muted></video>`:`<img data-act="light" data-id="${m.id}" data-i="${i}" src="${url(x)}" alt="${esc(x.caption)}">`).join('');
+ return `<article class="card mem"><header><div><h3>${esc(m.title)}</h3><small>${fmt(m.date)}${m.time?' · '+esc(m.time):''}${m.location?' · ⌖ '+esc(m.location):''}</small></div><div class="ib"><button data-act="fav" data-id="${m.id}">${m.favorite?'♥':'♡'}</button><button data-act="edit" data-id="${m.id}">Edit</button><button data-act="del" data-id="${m.id}">Delete</button></div></header>${m.desc?`<p class="desc">${esc(m.desc)}</p>`:''}<div class="chips">${[m.mood,m.category,...m.tags.map(t=>'#'+t)].filter(Boolean).map(c=>`<span>${esc(c)}</span>`).join('')}</div>${th?`<div class="thumbs">${th}</div>`:''}</article>`}
+function lightbox(items,i){LB={items,i};drawLB()}
+function drawLB(){let el=$('#lb');if(!el){el=document.createElement('div');el.id='lb';el.className='modal lb';document.body.appendChild(el)}const it=LB.items[LB.i],u=url(it);
+ el.innerHTML=`<button class="x" data-act="lbx">✕</button><button class="nv l" data-act="lbp">‹</button><div class="sb">${it.kind==='video'?`<video src="${u}" controls autoplay></video>`:`<img src="${u}" alt="">`}<p>${esc(it.caption||it.name||'')}</p><a class="btn" href="${u}" download="${esc(it.name||'memory')}">Download</a></div><button class="nv r" data-act="lbn">›</button>`}
+document.addEventListener('keydown',e=>{if(!$('#lb'))return;if(e.key==='Escape')$('#lb').remove();if(e.key==='ArrowLeft')A.lbp();if(e.key==='ArrowRight')A.lbn()});
+// ===== memory form =====
+function memForm(m,date){const ed=!!m;m=m||{tags:[],media:[]};let items=[];
+ const md=modal(`<h2>${ed?'Edit memory':'Add a memory'}</h2><form id="mf"><div class="fg"><label>Title<input name="title" required maxlength="120" value="${esc(m.title)}"></label><label>Date<input type="date" name="date" required value="${esc(m.date||date||iso(new Date()))}"></label><label>Time<input type="time" name="time" value="${esc(m.time)}"></label><label>Location<input name="location" maxlength="120" value="${esc(m.location)}"></label>
+ <label>Mood<select name="mood"><option value=""></option>${MOODS.map(x=>`<option ${x===m.mood?'selected':''}>${x}</option>`).join('')}</select></label><label>Category<select name="category">${CATS.map(x=>`<option ${x===(m.category||'General')?'selected':''}>${x}</option>`).join('')}</select></label>
+ <label class="full">Tags (comma separated)<input name="tags" value="${esc(m.tags.join(', '))}"></label><label class="full">Our story<textarea name="desc" maxlength="10000">${esc(m.desc)}</textarea></label></div>
+ ${m.media.length?`<p><small>Current files — tick to remove:</small></p>${m.media.map(x=>`<label class="ex">${x.kind==='video'?`<video src="${url(x)}" muted></video>`:`<img src="${url(x)}" alt="">`}<input type="checkbox" class="rmk" value="${x.id}"> Remove</label>`).join('')}`:''}
+ <label class="drop" id="dz">Drop photos & videos here, or click to browse<input type="file" id="fi" multiple accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/quicktime,video/webm" hidden></label><div class="pv" id="pv"></div>
+ <div class="actions"><button type="button" class="btn ghost" data-act="cl">Cancel</button><button class="btn" type="submit">Save memory</button></div></form>`);
+ const pv=$('#pv',md),draw=()=>{pv.innerHTML=items.map((x,i)=>`<div class="pi">${x.file.type.startsWith('video')?`<video src="${x.url}" muted></video>`:`<img src="${x.url}" alt="">`}<input class="cap" data-i="${i}" placeholder="Caption" value="${esc(x.cap)}"><button type="button" data-rm="${i}">✕</button></div>`).join('')};
+ const add=l=>{for(const f of l){if(!OKTYPE.test(f.type)){toast(`${f.name}: only JPG, PNG, WEBP, GIF, MP4, MOV and WEBM are supported.`);continue}items.push({file:f,url:URL.createObjectURL(f),cap:''})}draw()};
+ $('#fi',md).addEventListener('change',e=>{add(e.target.files);e.target.value=''});
+ ['dragover','drop'].forEach(n=>$('#dz',md).addEventListener(n,ev=>{ev.preventDefault();if(n==='drop')add(ev.dataTransfer.files)}));
+ pv.addEventListener('input',ev=>{if(ev.target.classList.contains('cap'))items[ev.target.dataset.i].cap=ev.target.value});
+ pv.addEventListener('click',ev=>{const b=ev.target.closest('[data-rm]');if(b){items.splice(+b.dataset.rm,1);draw()}});
+ $('#mf',md).addEventListener('submit',async ev=>{ev.preventDefault();const btn=$('button[type=submit]',md);btn.disabled=true;btn.textContent='Saving…';
+  try{const f=Object.fromEntries(new FormData(ev.target)),rm=[...md.querySelectorAll('.rmk:checked')].map(x=>x.value),title=f.title.trim();if(!title)throw new Error('Please add a title.');
+   const rec={...(ed?m:{id:uid(),created:Date.now(),deletedAt:null,favorite:false}),title,date:f.date,time:f.time,location:f.location.trim(),mood:f.mood,category:f.category,desc:f.desc,tags:f.tags.split(',').map(t=>t.trim()).filter(Boolean).slice(0,20),
+    media:[...m.media.filter(x=>!rm.includes(x.id)),...items.map(x=>({id:uid(),kind:x.file.type.startsWith('video')?'video':'photo',name:x.file.name,caption:x.cap,blob:x.file}))]};
+   await put('memories',rec);md.remove();toast('Memory saved ♥',1);refresh()}catch(er){toast(er.message);btn.disabled=false;btn.textContent='Save memory'}})}
+function dayModal(d){const ms=live().filter(m=>m.date===d),sp=liveD().filter(x=>x.date.slice(5)===d.slice(5)&&(x.recurring||x.date===d));
+ const m=modal(`<div class="bar"><h2 style="margin:0">${fmt(d)}</h2><button class="btn" data-act="add" data-d="${d}">+ Add memory</button></div>${sp.map(x=>`<div class="card">★ ${esc(x.name)} <small>· ${esc(x.category)}</small></div>`).join('')}${ms.length?ms.map(mcard).join(''):'<p class="empty">No memories on this day yet. Start one ♥</p>'}`);m.dataset.day=d}
+// ===== views =====
+const V={
+async home(){const t=iso(new Date()),a=live(),c=k=>a.reduce((n,m)=>n+m.media.filter(x=>x.kind===k).length,0),up=liveD().map(x=>{const n=nextOf(x.date,x.recurring,t);return n&&{...x,n,left:dd(n,t)}}).filter(Boolean).sort((p,q)=>p.n<q.n?-1:1).slice(0,5);
+ const oy=a.filter(m=>m.date.slice(5)===t.slice(5)&&m.date.slice(0,4)!==t.slice(0,4)),r=a.length?a[Math.floor(Math.random()*a.length)]:null;
+ const ms=[[100,'100 days'],[183,'6 months'],[365,'1 year'],[500,'500 days'],[730,'2 years'],[1000,'1000 days']],days=cfg.start?dd(t,cfg.start):null,nm=days==null?null:ms.find(x=>x[0]>days);
+ const tk=[...up.map(x=>x.name+' — '+(x.left?x.left+' days':'today')),'Every date has a story','Every memory has a place',a.length+' memories kept'].map(z=>`<span>${esc(z)}</span><u>✦</u>`).join(''),
+ rm=a.flatMap(m=>m.media.map(x=>({...x,title:m.title,date:m.date}))).slice(0,8);vItems=rm;
+ const md=x=>x.kind==='video'?`<video src="${url(x)}#t=0.5" preload="metadata" muted></video>`:`<img src="${url(x)}" loading="lazy" alt="${esc(x.caption)}">`;
+ $('#view').innerHTML=`<section class="hero"><div class="hglow"></div><div class="hgrid"></div><div class="hstat"><b>${days??a.length}</b><span>${days==null?'memories':'days together'}</span></div>
+ <p class="badge">${esc(cfg.names.join(' & '))}${cfg.start?' · since '+fmt(cfg.start):''}</p><h1 class="hh"><span class="ol">Our</span><span class="rd">Archives.</span><span>Kept close.</span></h1>
+ <p class="hp">Every date has a story. Every memory has a place.${nm?` Next milestone: ${nm[1]}, in ${nm[0]-days} days.`:''}</p>
+ <div class="actions"><button class="btn" data-act="add">Add a memory</button><button class="btn ghost" data-act="go" data-v="calendar">Our calendar</button><button class="btn ghost" data-act="go" data-v="dates">Add a date</button><button class="btn ghost" data-act="surprise">Surprise me</button></div></section>
+ <div class="ticker"><div class="ti">${tk+tk}</div></div>
+ <div class="grid3"><div class="card stat"><b>${days??'–'}</b><span>days together</span></div><div class="card stat"><b>${a.length}</b><span>memories</span></div><div class="card stat"><b>${c('photo')}</b><span>photos</span></div><div class="card stat"><b>${c('video')}</b><span>videos</span></div></div>
+ <section class="sec alt"><h2>Upcoming</h2>${up.length?`<div class="tiles">${up.map(x=>`<div class="tile"><div class="cd">${x.left||'♥'}</div><small>${x.left?'days to go':'today'}</small><h3>${esc(x.name)}</h3><small>${fmt(x.n)}</small></div>`).join('')}</div>`:'<p class="empty">No upcoming dates yet. Add an anniversary or birthday.</p>'}</section>
+ <section class="sec"><h2>Recent moments</h2>${rm.length?`<div class="strip">${rm.map((x,i)=>`<div class="gi" data-act="vlight" data-i="${i}">${md(x)}<div class="go"><b>${esc(x.title)}</b><small>${fmt(x.date)}</small></div></div>`).join('')}</div>`:'<p class="empty">No photos or videos yet. Add a memory with media.</p>'}</section>
+ <section class="sec alt"><h2>On this day</h2>${oy.length?oy.map(mcard).join(''):'<p class="empty">No memories from this date in earlier years yet.</p>'}
+ ${r?`<h2>Memory of the day</h2>${mcard(r)}`:''}</section>`;
+ reveal()},
+async calendar(){const y=cal.getFullYear(),mo=cal.getMonth(),ym=`${y}-${pad(mo+1)}`,a=live(),ds=liveD(),first=new Date(y,mo,1).getDay(),n=new Date(y,mo+1,0).getDate(),today=iso(new Date());let cells='<i></i>'.repeat(first);
+ for(let d=1;d<=n;d++){const k=`${ym}-${pad(d)}`,l=a.filter(m=>m.date===k),sp=ds.some(x=>x.date.slice(5)===k.slice(5)&&(x.recurring||x.date===k)),has=f=>l.some(m=>m.media.some(x=>x.kind===f));
+  cells+=`<button data-act="day" data-d="${k}" class="${k===today?'today':''} ${l.length?'has':''}"><b>${d}</b><span class="dots">${has('photo')?'<u></u>':''}${has('video')?'<u class="v"></u>':''}${l.some(m=>!m.media.length)?'<u class="t"></u>':''}${sp?'<u class="s">★</u>':''}</span></button>`}
+ $('#view').innerHTML=`<div class="bar"><h1>${cal.toLocaleDateString(undefined,{month:'long',year:'numeric'})}</h1><div class="ib"><button data-act="cprev">‹</button><button data-act="ctoday">Today</button><button data-act="cnext">›</button><button data-act="add">+ Memory</button></div></div>
+ <div class="cal head">${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(x=>`<div>${x}</div>`).join('')}</div><div class="cal">${cells}</div><p class="legend">● photos &nbsp; ■ videos &nbsp; ○ written memory &nbsp; ★ special date — click any day to open it</p>`},
+async vault(){$('#view').innerHTML=`<h1>Memory Vault</h1><p class="sub">Every photo and video, in one place.</p><div class="bar"><input id="vq" placeholder="Search captions, titles, tags, places, dates…" value="${esc(vault.q)}" style="max-width:360px"><div class="ib">${[['all','All'],['photo','Photos'],['video','Videos'],['fav','Favorites']].map(([k,t])=>`<button data-act="flt" data-f="${k}" ${vault.f===k?'style="border-color:var(--a)"':''}>${t}</button>`).join('')}<button data-act="lay" data-l="gridv">Grid</button><button data-act="lay" data-l="masonry">Masonry</button></div></div><div id="vg"></div>`;
+ $('#vq').addEventListener('input',e=>{vault.q=e.target.value;vg()});vg()}
+,async dates(){const t=iso(new Date()),l=liveD().map(x=>{const n=nextOf(x.date,x.recurring,t);return{...x,n,left:n?dd(n,t):null}}).sort((p,q)=>(p.n||'9')<(q.n||'9')?-1:1);
+ $('#view').innerHTML=`<h1>Important Dates</h1><p class="sub">Anniversaries, birthdays and firsts.</p><form id="df" class="card inline"><label>Event<input name="name" required maxlength="100" placeholder="e.g. Our anniversary"></label><label>Date<input type="date" name="date" required></label><label>Category<select name="category">${['Anniversary','Birthday','First Meeting','First Date','First Trip','Celebration','Milestone','Other'].map(c=>`<option>${c}</option>`).join('')}</select></label><label class="chk"><input type="checkbox" name="recurring" checked> Every year</label><button class="btn">Add</button></form>
+ ${l.length?l.map(x=>`<div class="card row"><div><h3>${esc(x.name)}</h3><small>${fmt(x.date)} · ${esc(x.category)}${x.recurring?' · yearly':''}</small></div><div class="cd">${x.left==null?'Past':x.left===0?'Today ♥':x.left+' days'}</div><button class="ib-btn" data-act="deldate" data-id="${x.id}">Delete</button></div>`).join(''):'<p class="empty">No dates saved yet. Add your first one above.</p>'}`;
+ $('#df').addEventListener('submit',async e=>{e.preventDefault();try{const f=new FormData(e.target);await put('dates',{id:uid(),name:f.get('name').trim(),date:f.get('date'),category:f.get('category'),recurring:f.get('recurring')==='on',deletedAt:null});toast('Date saved ♥',1);refresh()}catch(er){toast(er.message)}})},
+async trash(){const a=M.filter(m=>m.deletedAt).map(m=>({t:'memories',id:m.id,title:m.title,sub:fmt(m.date)+' · memory',at:m.deletedAt})),b=D.filter(x=>x.deletedAt).map(x=>({t:'dates',id:x.id,title:x.name,sub:fmt(x.date)+' · important date',at:x.deletedAt})),l=[...a,...b].sort((p,q)=>q.at-p.at);
+ $('#view').innerHTML=`<div class="bar"><div><h1>Trash Bin</h1><p class="sub" style="margin:0">Items are deleted forever after 30 days.</p></div>${l.length?'<button class="btn" data-act="empty">Empty trash</button>':''}</div>${l.length?l.map(x=>`<div class="card row"><div><h3>${esc(x.title)}</h3><small>${x.sub} · deleted ${new Date(x.at).toLocaleDateString()}</small></div><div class="ib"><button data-act="restore" data-t="${x.t}" data-id="${x.id}">Restore</button><button data-act="purge" data-t="${x.t}" data-id="${x.id}">Delete forever</button></div></div>`).join(''):'<p class="empty">The trash is empty.</p>'}`},
+async settings(){$('#view').innerHTML=`<h1>Settings</h1><form id="sf" class="card inline"><label>Your name<input name="n1" value="${esc(cfg.names[0])}" maxlength="40"></label><label>Partner's name<input name="n2" value="${esc(cfg.names[1])}" maxlength="40"></label><label>Relationship start<input type="date" name="start" value="${esc(cfg.start)}"></label><button class="btn">Save</button></form>
+ <form id="pf" class="card inline"><label>Current passcode<input type="password" name="old"></label><label>New passcode<input type="password" name="nw" minlength="4"></label><button class="btn">Change passcode</button></form>
+ <div class="card row"><div><h3>Appearance</h3><small>Dark or light mode</small></div><button class="btn ghost" data-act="theme">Switch theme</button></div>
+ <div class="card row"><div><h3>Storage</h3><small>${live().length} memories · ${M.reduce((n,m)=>n+m.media.length,0)} files saved in this browser</small></div></div>
+ <div class="card row"><div><h3>Danger zone</h3><small>Permanently erase everything saved in this browser</small></div><button class="btn" data-act="reset">Delete all data</button></div>`;
+ $('#sf').addEventListener('submit',async e=>{e.preventDefault();const f=new FormData(e.target);if(!f.get('n1').trim()||!f.get('n2').trim())return toast('Please enter both names.');cfg={...cfg,names:[f.get('n1').trim(),f.get('n2').trim()],start:f.get('start')};await put('meta',cfg,'cfg');$('#who').textContent=cfg.names.join(' & ');toast('Saved ♥',1)});
+ $('#pf').addEventListener('submit',async e=>{e.preventDefault();const f=new FormData(e.target);try{if(await hash(f.get('old'),cfg.salt)!==cfg.hash)throw new Error('Current passcode is incorrect.');if(f.get('nw').length<4)throw new Error('New passcode needs at least 4 characters.');const salt=crypto.getRandomValues(new Uint8Array(16));cfg={...cfg,salt,hash:await hash(f.get('nw'),salt)};await put('meta',cfg,'cfg');e.target.reset();toast('Passcode changed ♥',1)}catch(er){toast(er.message)}})}
+};
+async function vg(){const q=vault.q.trim().toLowerCase();let a=live();if(vault.f==='fav')a=a.filter(m=>m.favorite);
+ vItems=a.flatMap(m=>m.media.filter(x=>vault.f!=='photo'&&vault.f!=='video'||x.kind===vault.f).map(x=>({...x,date:m.date,title:m.title,hay:[m.title,m.desc,m.location,m.date,...m.tags,x.caption,x.name].join(' ').toLowerCase()}))).filter(x=>!q||x.hay.includes(q));
+ $('#vg').className=vault.l;$('#vg').innerHTML=vItems.length?vItems.map((x,i)=>`<div class="vi" data-act="vlight" data-i="${i}">${x.kind==='video'?`<video src="${url(x)}#t=0.5" preload="metadata" muted></video><em>▶</em>`:`<img src="${url(x)}" loading="lazy" alt="${esc(x.caption)}">`}<div class="go"><b>${esc(x.title)}</b><small>${esc(x.caption||fmt(x.date))}</small></div></div>`).join(''):'<p class="empty">Nothing here yet. Add photos or videos to a memory ♥</p>'}
+// ===== click actions =====
+const A={
+ go:d=>go(d.v),add:d=>memForm(null,d.d),day:d=>dayModal(d.d),cl:(d,b)=>b.closest('.modal').remove(),
+ cprev:()=>{cal=new Date(cal.getFullYear(),cal.getMonth()-1,1);V.calendar()},cnext:()=>{cal=new Date(cal.getFullYear(),cal.getMonth()+1,1);V.calendar()},ctoday:()=>{cal=new Date(new Date().getFullYear(),new Date().getMonth(),1);V.calendar()},
+ edit:d=>memForm(byId(d.id)),light:d=>lightbox(byId(d.id).media,+d.i),vlight:d=>lightbox(vItems,+d.i),
+ lbx:()=>$('#lb').remove(),lbp:()=>{LB.i=(LB.i-1+LB.items.length)%LB.items.length;drawLB()},lbn:()=>{LB.i=(LB.i+1)%LB.items.length;drawLB()},
+ async fav(d){const m=byId(d.id);m.favorite=!m.favorite;await put('memories',m);refresh()},
+ async del(d){if(await ask('Move this memory to the Trash? You can restore it for 30 days.')){const m=byId(d.id);m.deletedAt=Date.now();await put('memories',m);toast('Moved to Trash',1);refresh()}},
+ async deldate(d){if(await ask('Move this date to the Trash?')){const x=D.find(z=>z.id===d.id);x.deletedAt=Date.now();await put('dates',x);toast('Moved to Trash',1);refresh()}},
+ async restore(d){const x=(d.t==='memories'?M:D).find(z=>z.id===d.id);x.deletedAt=null;await put(d.t,x);toast('Restored to its original date ♥',1);refresh()},
+ async purge(d){if(await ask('Delete this permanently? This cannot be undone.')){await del(d.t,d.id);refresh()}},
+ async empty(){if(await ask('Permanently delete everything in the Trash?')){for(const m of M.filter(m=>m.deletedAt))await del('memories',m.id);for(const x of D.filter(x=>x.deletedAt))await del('dates',x.id);refresh()}},
+ surprise(){const a=live();if(!a.length)return toast('Add a memory first ♥');modal(`<h2>A little surprise ♥</h2>${mcard(a[Math.floor(Math.random()*a.length)])}`)},
+ flt:d=>{vault.f=d.f;V.vault()},lay:d=>{vault.l=d.l;vg()},
+ async theme(){const t=document.documentElement.dataset.theme==='dark'?'light':'dark';setTheme(t);if(cfg){cfg.theme=t;await put('meta',cfg,'cfg')}},
+ out(){document.querySelectorAll('.modal').forEach(m=>m.remove());showAuth(false)},col:()=>$('#app').classList.toggle('mini'),
+ async reset(){if(await ask('This erases ALL memories, photos, videos, dates and your passcode from this browser. Continue?')){for(const s of['memories','dates','meta'])for(const k of await tx(s,'readonly',o=>o.getAllKeys()))await del(s,k);cfg=null;M=[];D=[];showAuth(true)}}
+};
+document.addEventListener('click',async e=>{const b=e.target.closest('[data-act]');if(!b||!A[b.dataset.act])return;try{await A[b.dataset.act](b.dataset,b)}catch(er){toast(er.message)}});
+function reveal(){}
+document.addEventListener('pointermove',e=>{const h=$('.hero');if(h){const r=h.getBoundingClientRect();h.style.setProperty('--mx',e.clientX-r.left+'px');h.style.setProperty('--my',e.clientY-r.top+'px')}});
+document.addEventListener('keydown',e=>{if(e.key!=='Escape'||$('#lb'))return;const m=[...document.querySelectorAll('.modal')].pop();if(m)m.dispatchEvent(new MouseEvent('mousedown',{bubbles:true}))});
+// ===== start =====
+(async()=>{try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist();cfg=await get('meta','cfg')||null;if(cfg)setTheme(cfg.theme||'dark');showAuth(!cfg)}catch(e){toast('Could not open browser storage: '+e.message)}})();
+</script></body></html>
